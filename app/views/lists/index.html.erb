@@ -1,9 +1,13 @@
-<h1>My list</h1>
+<div class="banner">
+  <h1>My list</h1>
+  </div>
 
-<% @lists.each do |list| %>
-  <ul>
-    <li><%= link_to list.name, list_path(list) %></li>
-  </ul>
-<%end %>
+<div class="container">
+  <% @lists.each do |list| %>
+    <ul>
+      <li><%= link_to list.name, list_path(list) %></li>
+    </ul>
+  <%end %>
+</div>
 
 <%= link_to "create new list",  new_list_path %>
